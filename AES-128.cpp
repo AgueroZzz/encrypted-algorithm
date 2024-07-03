@@ -1,8 +1,3 @@
-﻿#define TSMP_IMPL
-#include "TSMasterMP.h"
-#include "MPLibrary.h"
-#include "Database.h"
-#include "Test.h"
 #include <openssl/aes.h>
 #include <openssl/cmac.h>
 #include <openssl/evp.h>
@@ -15,7 +10,6 @@
 #include <array>
 #include <iomanip>
 using namespace std;
-#pragma comment(lib,"libcrypto.lib")
 constexpr size_t IV_SIZE = 12;
 
 s32 tssecurity_encrypt_aes128_cbc(pu8 key, u32 keyLength, pu8 data, u32 dataLength, pu8 initVector, u32 initVectorLength, pu8 cipheredData, int cipheredDataLength);
